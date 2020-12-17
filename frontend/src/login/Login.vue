@@ -42,8 +42,8 @@
         </el-form>
       </el-col>
       <el-col :span="12">
-        <img v-if="loginImageId" :src="'/display/file/' + loginImageId" style="height: 560px; width: 100%">
-        <img v-else src="../assets/info.png" style="height: 560px; width: 100%">
+<!--        <img v-if="loginImageId" :src="'/display/file/' + loginImageId" style="height: 560px; width: 100%">-->
+        <img src="../assets/info.png" style="height: 560px; width: 100%">
       </el-col>
     </el-row>
   </div>
@@ -92,7 +92,7 @@ export default {
     }
   },
   beforeCreate() {
-    this.result = this.$get("/isLogin").then(response => {
+    this.result = this.$get("/").then(response => {
 
       if (display.default !== undefined) {
         display.default.showLogin(this);

@@ -7,8 +7,8 @@
     </el-row>
     <el-row id="header-top" type="flex" justify="space-between" align="middle">
       <el-col :span="12">
-        <img v-if="logoId" :src="'/display/file/' + logoId" style="width: 156px;height: 37px;" alt="">
-        <a v-else class="logo"/>
+<!--        <img v-if="logoId" :src="'/display/file/' + logoId" style="width: 156px;height: 37px;" alt="">-->
+        <a class="logo"/>
         <ms-top-menus/>
       </el-col>
 
