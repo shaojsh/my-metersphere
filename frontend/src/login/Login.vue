@@ -4,8 +4,8 @@
       <el-col :span="12">
         <el-form :model="form" :rules="rules" ref="form">
           <div class="logo">
-            <img v-if="loginLogoId" :src="'/display/file/' + loginLogoId" style="width: 224px;height: 45px;" alt="">
-            <img v-else src="../assets/logo-dark-MeterSphere.svg" style="width: 224px; " alt="">
+<!--            <img v-if="loginLogoId" :src="'/display/file/' + loginLogoId" style="width: 224px;height: 45px;" alt="">-->
+            <img src="../assets/logo-dark-MeterSphere.svg" style="width: 224px; " alt="">
           </div>
           <div class="title">
             <span id="s1">{{ $t('commons.login') }}</span>
@@ -256,7 +256,7 @@ export default {
 .msg {
   margin-top: 10px;
   padding: 0 40px;
-  color: red;
+  color: #ff0000;
   text-align: center;
 }
 
