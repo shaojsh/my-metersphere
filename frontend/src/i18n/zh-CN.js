@@ -51,6 +51,7 @@ export default {
     system: '系统',
     personal_setting: '个人设置',
     test_resource_pool: '测试资源池',
+    ui_test: 'UI自动化测试',
     system_setting: '系统设置',
     api: '接口测试',
     performance: '性能测试',
