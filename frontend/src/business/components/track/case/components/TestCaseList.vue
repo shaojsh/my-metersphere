@@ -209,7 +209,7 @@ export default {
         pageSize: 10,
         total: 0,
         selectRows: new Set(),
-        priorityFilters: [
+        priorityFilters : [
           {text: 'P0', value: 'P0'},
           {text: 'P1', value: 'P1'},
           {text: 'P2', value: 'P2'},

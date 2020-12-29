@@ -56,9 +56,9 @@
           show-overflow-tooltip
         >
           <template v-slot:default="scope">
-            <!--<div @mouseover="showDetail(scope.row)">
-              <p>{{ scope.row.name }}</p>
-            </div>-->
+<!--            <div @mouseover="showDetail(scope.row)">-->
+<!--              <p>{{ scope.row.name }}</p>-->
+<!--            </div>-->
             <el-popover
               placement="right-end"
               :title="$t('test_track.case.view_case')"
@@ -172,9 +172,9 @@ import ShowMoreBtn from "./ShowMoreBtn";
 import BatchEdit from "./BatchEdit";
 import {WORKSPACE_ID} from "../../../../../common/js/constants";
 import {LIST_CHANGE, TrackEvent} from "@/business/components/common/head/ListEvent";
-import StatusTableItem from "@/business/components/track/common/tableItems/planview/StatusTableItem";
+import StatusTableItem from "@/business/components/uitest/common/tableItems/planview/StatusTableItem";
 import TestCaseDetail from "./TestCaseDetail";
-import ReviewStatus from "@/business/components/track/case/components/ReviewStatus";
+import ReviewStatus from "@/business/components/uitest/case/components/ReviewStatus";
 
 export default {
   name: "TestCaseList",

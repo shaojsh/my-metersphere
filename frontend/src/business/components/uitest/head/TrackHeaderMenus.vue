@@ -5,7 +5,7 @@
       <el-col :span="12">
         <el-menu class="header-menu" :unique-opened="true" mode="horizontal" router
                  :default-active='$route.path'>
-          <el-menu-item :index="'/track/home'">
+          <el-menu-item :index="'/uitest/home'">
             {{ $t("i18n.home") }}
           </el-menu-item>
           <el-submenu :class="{'deactivation':!isProjectActivation}"
@@ -13,8 +13,8 @@
             <template v-slot:title>{{ $t('commons.project') }}</template>
             <ms-recent-list ref="projectRecent" :options="projectRecent"/>
             <el-divider/>
-            <ms-show-all :index="'/track/project/all'"/>
-            <ms-create-button v-permission="['test_manager','test_user']" :index="'/track/project/create'"
+            <ms-show-all :index="'/uitest/project/all'"/>
+            <ms-create-button v-permission="['test_manager','test_user']" :index="'/uitest/project/create'"
                               :title="$t('project.create')"/>
           </el-submenu>
 
@@ -23,10 +23,10 @@
             <template v-slot:title>{{ $t('test_track.case.test_case') }}</template>
             <ms-recent-list ref="caseRecent" :options="caseRecent"/>
             <el-divider/>
-            <ms-show-all :index="'/track/case/all'"/>
+            <ms-show-all :index="'/uitest/case/all'"/>
             <el-menu-item :index="testCaseEditPath" class="blank_item"></el-menu-item>
             <el-menu-item :index="testCaseProjectPath" class="blank_item"></el-menu-item>
-            <ms-create-button v-permission="['test_manager','test_user']" :index="'/track/case/create'"
+            <ms-create-button v-permission="['test_manager','test_user']" :index="'/uitest/case/create'"
                               :title="$t('test_track.case.create_case')"/>
           </el-submenu>
 
@@ -35,18 +35,18 @@
             <template v-slot:title>{{$t('test_track.review.test_review')}}</template>
             <ms-recent-list ref="reviewRecent" :options="reviewRecent"/>
             <el-divider/>
-            <ms-show-all :index="'/track/review/all'"/>
+            <ms-show-all :index="'/uitest/review/all'"/>
             <el-menu-item :index="testCaseReviewEditPath" class="blank_item"/>
-            <ms-create-button v-permission="['test_manager','test_user']" :index="'/track/review/create'" :title="$t('test_track.review.create_review')"/>
+            <ms-create-button v-permission="['test_manager','test_user']" :index="'/uitest/review/create'" :title="$t('test_track.review.create_review')"/>
           </el-submenu>
 
           <el-submenu v-permission="['test_manager','test_user','test_viewer']" index="7" popper-class="submenu">
             <template v-slot:title>{{ $t('test_track.plan.test_plan') }}</template>
             <ms-recent-list ref="planRecent" :options="planRecent"/>
             <el-divider/>
-            <ms-show-all :index="'/track/plan/all'"/>
+            <ms-show-all :index="'/uitest/plan/all'"/>
             <el-menu-item :index="testPlanViewPath" class="blank_item"></el-menu-item>
-            <ms-create-button v-permission="['test_manager','test_user']" :index="'/track/plan/create'"
+            <ms-create-button v-permission="['test_manager','test_user']" :index="'/uitest/plan/create'"
                               :title="$t('test_track.plan.create_plan')"/>
           </el-submenu>
         </el-menu>
@@ -78,7 +78,7 @@ export default {
         title: this.$t('project.recent'),
         url: "/project/recent/5",
         index: function (item) {
-          return '/track/case/' + item.id;
+          return '/uitest/case/' + item.id;
         },
         router: function (item) {
           return {name: 'testCase', params: {projectId: item.id, projectName: item.name}}
@@ -88,7 +88,7 @@ export default {
         title: this.$t('test_track.recent_case'),
         url: "/test/case/recent/5",
         index: function (item) {
-          return '/track/case/edit/' + item.id;
+          return '/uitest/case/edit/' + item.id;
         },
         router: function (item) {
         }
@@ -97,7 +97,7 @@ export default {
         title: this.$t('test_track.recent_review'),
         url: "/test/case/review/recent/5",
         index: function (item) {
-          return '/track/review/view/' + item.id;
+          return '/uitest/review/view/' + item.id;
         },
         router: function (item) {
         }
@@ -106,7 +106,7 @@ export default {
         title: this.$t('test_track.recent_plan'),
         url: "/test/plan/recent/5",
         index: function (item) {
-          return '/track/plan/view/' + item.id;
+          return '/uitest/plan/view/' + item.id;
         },
         router: function (item) {
         }
@@ -131,7 +131,7 @@ export default {
     },
     init() {
       let path = this.$route.path;
-      if (path.indexOf("/track/case") >= 0 && !!this.$route.params.projectId) {
+      if (path.indexOf("/uitest/case") >= 0 && !!this.$route.params.projectId) {
         this.testCaseProjectPath = path;
         //不激活项目菜单栏
         this.isProjectActivation = false;
@@ -139,11 +139,11 @@ export default {
       } else {
         this.isProjectActivation = true;
       }
-      if (path.indexOf("/track/plan/view") >= 0) {
+      if (path.indexOf("/uitest/plan/view") >= 0) {
         this.testPlanViewPath = path;
         this.reload();
       }
-      if (path.indexOf("/track/case/edit") >= 0) {
+      if (path.indexOf("/uitest/case/edit") >= 0) {
         this.testCaseEditPath = path;
         this.reload();
       }

@@ -20,7 +20,7 @@
       components: {TrackHeaderMenus},
       data() {
         return {
-          baseUrl: "track"
+          baseUrl: "uitest"
         }
       }
     }

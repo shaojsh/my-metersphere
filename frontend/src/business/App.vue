@@ -129,9 +129,9 @@ export default {
 
 .license-head {
   height: 30px;
-  background: #BA331B;
+  background: #ba331b;
   text-align: center;
   line-height: 30px;
-  color: white;
+  color: #ffffff;
 }
 </style>

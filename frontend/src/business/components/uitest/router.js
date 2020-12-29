@@ -1,17 +1,17 @@
 import MsProject from "@/business/components/project/MsProject";
 
-const TestTrack = () => import('@/business/components/track/TestTrack')
-const TrackHome = () => import('@/business/components/track/home/TrackHome')
-const TestCase = () => import('@/business/components/track/case/TestCase')
-const TestPlan = () => import('@/business/components/track/plan/TestPlan')
-const TestCaseReview = () => import('@/business/components/track/review/TestCaseReview')
-const TestCaseReviewView = () => import('@/business/components/track/review/view/TestCaseReviewView')
-const TestPlanView = () => import('@/business/components/track/plan/view/TestPlanView')
+const TestTrack = () => import('@/business/components/uitest/TestTrack')
+const TrackHome = () => import('@/business/components/uitest/home/TrackHome')
+const TestCase = () => import('@/business/components/uitest/case/TestCase')
+const TestPlan = () => import('@/business/components/uitest/plan/TestPlan')
+const TestCaseReview = () => import('@/business/components/uitest/review/TestCaseReview')
+const TestCaseReviewView = () => import('@/business/components/uitest/review/view/TestCaseReviewView')
+const TestPlanView = () => import('@/business/components/uitest/plan/view/TestPlanView')
 
 export default {
-  path: "/track",
-  name: "track",
-  redirect: "/track/home",
+  path: "/uitest",
+  name: "uitest",
+  redirect: "/uitest/home",
   components: {
     content: TestTrack
   },

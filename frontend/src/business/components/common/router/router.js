@@ -6,6 +6,7 @@ import Setting from "@/business/components/settings/router";
 import API from "@/business/components/api/router";
 import Performance from "@/business/components/performance/router";
 import Track from "@/business/components/track/router";
+import uitest from "@/business/components/uitest/router";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,7 @@ const router = new VueRouter({
     API,
     Performance,
     Track,
+    uitest,
   ]
 });
 

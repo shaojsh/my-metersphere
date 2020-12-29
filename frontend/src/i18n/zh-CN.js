@@ -56,6 +56,7 @@ export default {
     api: '接口测试',
     performance: '性能测试',
     functional: '功能测试',
+    uitest: 'UI自动化测试',
     input_content: '请输入内容',
     create: '新建',
     edit: '编辑',
