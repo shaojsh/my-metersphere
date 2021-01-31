@@ -18,11 +18,11 @@
                   v-permission="['test_manager','test_user','test_viewer']">
       {{$t('commons.performance')}}
     </el-menu-item>
-    <el-menu-item index="/setting" onselectstart="return false">
-      {{$t('commons.system_setting')}}
-    </el-menu-item>
     <el-menu-item index="/uitest" onselectstart="return false">
       {{$t('commons.ui_test')}}
+    </el-menu-item>
+    <el-menu-item index="/setting" onselectstart="return false">
+      {{$t('commons.system_setting')}}
     </el-menu-item>
   </el-menu>
 </template>
